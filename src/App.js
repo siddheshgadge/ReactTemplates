@@ -1,14 +1,9 @@
 import {Routes, Route, BrowserRouter} from 'react-router-dom';
 import Home from './pages/Home';
 import About from './pages/About'
-import { Box, createTheme } from '@mui/material';
+import { Box } from '@mui/material';
 import NavBar from './Components/NavBar';
-
-const darkTheme = createTheme({
-  palette : {
-    mode: 'dark'
-  }
-})
+import './App.css';
 
 function App() {
   return (<>
