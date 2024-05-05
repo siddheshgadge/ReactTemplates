@@ -69,9 +69,9 @@ const closedMixin = (theme) => ({
     duration: theme.transitions.duration.leavingScreen,
   }),
   overflowX: 'hidden',
-  width: `calc(${theme.spacing(7)} + 1px)`,
+  width: `calc(${theme.spacing(4)} + 1px)`,
   [theme.breakpoints.up('sm')]: {
-    width: `calc(${theme.spacing(8)} + 1px)`,
+    width: `calc(${theme.spacing(5)} + 1px)`,
   },
 });
 
@@ -170,7 +170,7 @@ const mobileMenuId = 'primary-search-account-menu-mobile';
     <Box sx={{ display: 'flex'}}>
       <CssBaseline />
       <AppBar position="fixed" open={open} sx={{bgcolor: '#000000'}}>
-        <Toolbar variant='dense'>
+        <Toolbar variant='dense' disableGutters='true'>
           
           <IconButton
             color="inherit"
@@ -280,7 +280,7 @@ const mobileMenuId = 'primary-search-account-menu-mobile';
                     justifyContent: 'center',
                   }}
                 >
-                  {index % 2 === 0 ? <InboxIcon /> : <MailIcon />}
+                  {index % 2 === 0 ? <InboxIcon fontSize='small' /> : <MailIcon  fontSize='small' />}
                 </ListItemIcon>
                 <ListItemText primary={navItem.label} disableTypography  sx={{ opacity: open ? 1 : 0, fontSize:'0.8rem', fontWeight:'900' }} />
               </ListItemButton>
